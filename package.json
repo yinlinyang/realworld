@@ -1,0 +1,21 @@
+{
+  "name": "fed-e-task-03-03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt dev",
+    "start": "nuxt dev",
+    "build": "nuxt build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/yinlinyang/fed-e-task-03-03.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nuxt": "^2.14.7"
+  }
+}
