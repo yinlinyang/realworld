@@ -6,42 +6,42 @@ module.exports = {
         ...[
           {
             path: '/',
-            component: resolve(__dirname, 'pages/layout'),
+            component: resolve(__dirname, 'src/pages/layout'),
             children: [
               {
                 path: '',
                 name: 'home',
-                component: resolve(__dirname, 'pages/home')
+                component: resolve(__dirname, 'src/pages/home')
               },
               {
                 path: '/login',
                 name: 'login',
-                component: resolve(__dirname, 'pages/login')
+                component: resolve(__dirname, 'src/pages/login')
               },
               {
                 path: '/register',
                 name: 'register',
-                component: resolve(__dirname, 'pages/login')
+                component: resolve(__dirname, 'src/pages/login')
               },
               {
                 path: '/profile/:username',
                 name: 'profile',
-                component: resolve(__dirname, 'pages/profile')
+                component: resolve(__dirname, 'src/pages/profile')
               },
               {
                 path: '/settings',
                 name: 'settings',
-                component: resolve(__dirname, 'pages/settings')
+                component: resolve(__dirname, 'src/pages/settings')
               },
               {
                 path: '/editor',
                 name: 'editor',
-                component: resolve(__dirname, 'pages/editor')
+                component: resolve(__dirname, 'src/pages/editor')
               },
               {
                 path: '/article/:slug',
                 name: 'article',
-                component: resolve(__dirname, 'pages/article')
+                component: resolve(__dirname, 'src/pages/article')
               }
             ],
           },
