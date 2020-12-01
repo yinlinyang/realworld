@@ -8,16 +8,14 @@
 <script>
 export default {
   props: {
-    fontSize: Number
+    fontSize: Number,
   },
   methods: {
-    handler () {
+    handler() {
       this.$emit('enlargeText', 0.1)
-    }
-  }
+    },
+  },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

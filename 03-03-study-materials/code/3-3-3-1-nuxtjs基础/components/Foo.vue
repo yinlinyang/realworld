@@ -2,10 +2,7 @@
   <div>
     <h1>FooPage</h1>
     <ul>
-      <li
-        v-for="item in posts"
-        :key="item.id"
-      >
+      <li v-for="item in posts" :key="item.id">
         <nuxt-link :to="'/article/' + item.id">{{ item.title }}</nuxt-link>
       </li>
     </ul>
@@ -25,6 +22,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

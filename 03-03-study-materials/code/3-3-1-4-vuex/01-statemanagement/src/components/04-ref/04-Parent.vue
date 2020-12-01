@@ -10,15 +10,13 @@
 import child from './04-Child'
 export default {
   components: {
-    child
+    child,
   },
-  mounted () {
+  mounted() {
     this.$refs.c.focus()
     this.$refs.c.value = 'hello input'
-  }
+  },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

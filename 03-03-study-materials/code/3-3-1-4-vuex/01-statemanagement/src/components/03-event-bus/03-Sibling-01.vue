@@ -2,7 +2,7 @@
   <div>
     <h1>Event Bus Sibling01</h1>
     <div class="number" @click="sub">-</div>
-    <input type="text" style="width: 30px; text-align: center" :value="value">
+    <input type="text" style="width: 30px; text-align: center" :value="value" />
     <div class="number" @click="add">+</div>
   </div>
 </template>
@@ -12,28 +12,28 @@ import bus from './eventbus'
 
 export default {
   props: {
-    num: Number
+    num: Number,
   },
-  created () {
+  created() {
     this.value = this.num
   },
-  data () {
+  data() {
     return {
-      value: -1
+      value: -1,
     }
   },
   methods: {
-    sub () {
+    sub() {
       if (this.value > 1) {
         this.value--
         bus.$emit('numchange', this.value)
       }
     },
-    add () {
+    add() {
       this.value++
       bus.$emit('numchange', this.value)
-    }
-  }
+    },
+  },
 }
 </script>
 

@@ -10,19 +10,17 @@
 import store from './store'
 export default {
   methods: {
-    change () {
+    change() {
       store.setUserNameAction('componentB')
-    }
+    },
   },
-  data () {
+  data() {
     return {
       privateState: {},
-      sharedState: store.state
+      sharedState: store.state,
     }
-  }
+  },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

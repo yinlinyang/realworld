@@ -4,13 +4,13 @@ export default {
     user: {
       name: 'xiaomao',
       age: 18,
-      sex: '男'
-    }
+      sex: '男',
+    },
   },
-  setUserNameAction (name) {
+  setUserNameAction(name) {
     if (this.debug) {
       console.log('setUserNameAction triggered：', name)
     }
     this.state.user.name = name
-  }
+  },
 }

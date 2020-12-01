@@ -17,5 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "nuxt": "^2.14.7"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
   }
 }

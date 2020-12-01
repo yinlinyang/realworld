@@ -9,11 +9,9 @@
 import child from './01-Child'
 export default {
   components: {
-    child
-  }
+    child,
+  },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

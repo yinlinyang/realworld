@@ -3,24 +3,23 @@
     <h1>父给子传值</h1>
     <parent01></parent01>
 
-    <hr>
+    <hr />
     <h1>子给父传值</h1>
     <parent02></parent02>
 
-    <hr>
+    <hr />
     <h1>不相关组件传值</h1>
     <sibling0301 :num="num"></sibling0301>
     <sibling0302></sibling0302>
-  
-    <hr>
+
+    <hr />
     <h1>父直接访问子组件：通过 ref 获取子组件</h1>
     <parent04></parent04>
 
-    <hr>
+    <hr />
     <h1>简易的状态管理</h1>
     <componentA05></componentA05>
     <componentB05></componentB05>
-
   </div>
 </template>
 
@@ -33,7 +32,6 @@ import parent04 from './components/04-ref/04-Parent'
 import componentA05 from './components/05-easystate/05-componentA'
 import componentB05 from './components/05-easystate/05-componentB'
 
-
 export default {
   name: 'App',
   components: {
@@ -43,15 +41,14 @@ export default {
     sibling0302,
     parent04,
     componentA05,
-    componentB05
+    componentB05,
   },
-  data () {
+  data() {
     return {
-      num: 1
+      num: 1,
     }
-  }
+  },
 }
 </script>
 
-<style>
-</style>
+<style></style>

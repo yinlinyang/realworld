@@ -1,25 +1,23 @@
 <template>
   <div>
     <h1>ref Child</h1>
-    <input ref="input" type="text" v-model="value">
+    <input ref="input" type="text" v-model="value" />
   </div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      value: ''
+      value: '',
     }
   },
   methods: {
-    focus () {
+    focus() {
       this.$refs.input.focus()
-    }
-  }
+    },
+  },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
