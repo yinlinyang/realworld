@@ -6,20 +6,23 @@
         <ul class="nav navbar-nav pull-xs-right">
           <li class="nav-item">
             <!-- Add "active" class when you're on that page" -->
-            <a class="nav-link active" href="">Home</a>
+            <nuxt-link to="/">Home</nuxt-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">
+            <nuxt-link to="/editor">
               <i class="ion-compose"></i>&nbsp;New Post
-            </a>
+            </nuxt-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">
+            <nuxt-link to="/settings">
               <i class="ion-gear-a"></i>&nbsp;Settings
-            </a>
+            </nuxt-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Sign up</a>
+            <nuxt-link to="/register">Sign in</nuxt-link>
+          </li>
+          <li class="nav-item">
+            <nuxt-link to="/login">Sign up</nuxt-link>
           </li>
         </ul>
       </div>
