@@ -1,4 +1,4 @@
-import request from '@/src/plugins/request'
+import request from '@/plugins/request'
 
 export const login = (data) => {
   return request({

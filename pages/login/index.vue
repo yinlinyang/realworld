@@ -48,7 +48,8 @@
 </template>
   
 <script>
-import { login, register } from '@/src/api/user'
+import { login, register } from '@/api/user'
+import { mapMutations } from 'vuex'
 export default {
 	name: "Login",
 	data () {
@@ -66,11 +67,13 @@ export default {
 		}
 	},
 	methods: {
+		...mapMutations(['setUser']),
 		async onSubmit () {
 			try {
 				const user = this.user
-				this.isLogin ? await login({user}) : await register({user})
+				const { data } = this.isLogin ? await login({user}) : await register({user})
 				this.$router.push('/')
+				this.setUser(data.user)
 			} catch (error) {
 				console.log(error)
 			}
