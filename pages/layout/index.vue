@@ -8,22 +8,26 @@
             <!-- Add "active" class when you're on that page" -->
             <nuxt-link to="/">Home</nuxt-link>
           </li>
-          <li class="nav-item">
-            <nuxt-link to="/editor">
-              <i class="ion-compose"></i>&nbsp;New Post
-            </nuxt-link>
-          </li>
-          <li class="nav-item">
-            <nuxt-link to="/settings">
-              <i class="ion-gear-a"></i>&nbsp;Settings
-            </nuxt-link>
-          </li>
-          <li class="nav-item">
-            <nuxt-link to="/register">Sign in</nuxt-link>
-          </li>
-          <li class="nav-item">
-            <nuxt-link to="/login">Sign up</nuxt-link>
-          </li>
+          <template v-if="user">
+            <li class="nav-item">
+              <nuxt-link to="/editor">
+                <i class="ion-compose"></i>&nbsp;New Post
+              </nuxt-link>
+            </li>
+            <li class="nav-item">
+              <nuxt-link to="/settings">
+                <i class="ion-gear-a"></i>&nbsp;Settings
+              </nuxt-link>
+            </li>
+          </template>
+          <template v-else>
+            <li class="nav-item">
+              <nuxt-link to="/register">Sign in</nuxt-link>
+            </li>
+            <li class="nav-item">
+              <nuxt-link to="/login">Sign up</nuxt-link>
+            </li>
+          </template>
         </ul>
       </div>
     </nav>
@@ -43,8 +47,13 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'LayoutIndex',
+  computed: {
+    ...mapState(['user'])
+  }
 }
 </script>
 
