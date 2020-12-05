@@ -19,13 +19,19 @@
                 <i class="ion-gear-a"></i>&nbsp;Settings
               </nuxt-link>
             </li>
+            <li class="nav-item">
+              <nuxt-link to="/profile/123">
+                <img class="user-pic" :src="user.image" />
+                {{ user.username }}
+              </nuxt-link>
+            </li>
           </template>
           <template v-else>
             <li class="nav-item">
-              <nuxt-link to="/register">Sign in</nuxt-link>
+              <nuxt-link to="/login">Sign in</nuxt-link>
             </li>
             <li class="nav-item">
-              <nuxt-link to="/login">Sign up</nuxt-link>
+              <nuxt-link to="/register">Sign up</nuxt-link>
             </li>
           </template>
         </ul>
@@ -57,4 +63,10 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+  .user-pic {
+    height: 26px;
+    border-radius: 50px;
+    margin-right: 5px;
+  }
+</style>>

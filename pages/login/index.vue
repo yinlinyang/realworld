@@ -57,6 +57,7 @@ const Cookie = process.client ? require('js-cookie') : null
 
 export default {
   name: "Login",
+  middleware: ['noAuthenticated'],
   data () {
     return {
       user: {
@@ -82,7 +83,12 @@ export default {
         Cookie.set('user', data.user)
         this.setUser(data.user)
       } catch (err) {
-        this.errors = err.response.data.errors
+        console.log(err)
+        if (err && err.response) {
+          this.errors = err.response.data.errors
+        }
+      } finally {
+
       }
     }
   }

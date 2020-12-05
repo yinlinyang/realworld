@@ -1,4 +1,5 @@
 module.exports = {
+  plugins: ['~/plugins/request.js'],
   router: {
     extendRoutes(routes, resolve) {
       routes.splice(0)
