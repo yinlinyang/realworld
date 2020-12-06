@@ -57,12 +57,12 @@ const Cookie = process.client ? require('js-cookie') : null
 
 export default {
   name: "Login",
-  middleware: ['noAuthenticated'],
+  middleware: ['notAuthenticated'],
   data () {
     return {
       user: {
-        username: '',
-        email: '',
+        username: 'ccc.yyy@gmail.com',
+        email: 'ccc.yyy@gmail.com',
         password: '12345678',
       },
       errors: []
