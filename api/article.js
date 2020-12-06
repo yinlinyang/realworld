@@ -57,3 +57,19 @@ export const unfavorite = (slug) => {
     url: `${api.articles}/${slug}/favorite`,
   })
 }
+
+
+export const getComments = (slug) => {
+  return request({
+    method: 'get',
+    url: `${api.articles}/${slug}/comments`
+  })
+}
+
+export const addComment = (slug, data) => {
+  return request({
+    method: 'post',
+    url: `${api.articles}/${slug}/comments`,
+    data
+  })
+}
