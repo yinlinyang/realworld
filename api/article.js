@@ -13,6 +13,29 @@ export const getArticles = (data) => {
   })
 }
 
+export const getArticle = (slug) => {
+  return request({
+    method: 'get',
+    url: `${api.articles}/${slug}`,
+  })
+}
+
+export const createArticles = (data) => {
+  return request({
+    method: 'post',
+    url: api.articles,
+    data
+  })
+}
+
+export const modifyArticle = (slug, data) => {
+  return request({
+    method: 'put',
+    url: `${api.articles}/${slug}`,
+    data,
+  })
+}
+
 export const getFeed = (data) => {
   return request({
     method: 'get',
