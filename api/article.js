@@ -73,3 +73,10 @@ export const addComment = (slug, data) => {
     data
   })
 }
+
+export const deleteComment = (slug, id) => {
+  return request({
+    method: 'delete',
+    url: `${api.articles}/${slug}/comments/${id}`
+  })
+}

@@ -32,9 +32,7 @@
             </div>
             <div class="card-footer">
               <img :src="user.image" class="comment-author-img" />
-              <button class="btn btn-sm btn-primary">
-                Post Comment
-              </button>
+              <button class="btn btn-sm btn-primary">Post Comment</button>
             </div>
           </form>
 
@@ -63,7 +61,16 @@
                 class="comment-author"
                 >{{ comment.author.username }}</nuxt-link
               >
-              <span class="date-posted">{{ comment.createdAt }}</span>
+              <span class="date-posted">{{ comment.createdAt | date('MMMM DD, YYYY') }}</span>
+              <span
+                class="mod-options"
+                v-if="user.username === comment.author.username"
+              >
+                <i
+                  class="ion-trash-a"
+                  @click="handleDeleteComment(comment)"
+                ></i>
+              </span>
             </div>
           </div>
         </div>
@@ -73,7 +80,7 @@
 </template>
 
 <script>
-import { getArticle, getComments, addComment } from '@/api/article'
+import { getArticle, getComments, addComment, deleteComment } from '@/api/article'
 import ArticleMeta from './components/ArticleMeta'
 import { mapState } from 'vuex'
 
@@ -111,8 +118,8 @@ export default {
         const { params } = this.$route
         const { slug } = params
         const content = this.content
-				await addComment(slug, { comment: { body: content } })
-				this.content = ''
+        await addComment(slug, { comment: { body: content } })
+        this.content = ''
         this.getComment()
       } catch (error) {
         console.log(error)
@@ -122,6 +129,17 @@ export default {
       try {
         const { params } = this.$route
         const { slug } = params
+        const { data } = await getComments(slug)
+        this.comments = data.comments
+      } catch (error) {
+        console.log(error)
+      }
+    },
+    async handleDeleteComment (comment) {
+      try {
+        const { id } = comment
+        const { params: { slug } } = this.$route
+        await deleteComment(slug, id)
         const { data } = await getComments(slug)
         this.comments = data.comments
       } catch (error) {

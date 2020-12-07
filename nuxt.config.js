@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ['~/plugins/request.js'],
+  plugins: ['~/plugins/request.js', '~/plugins/dayjs.js'],
   router: {
     extendRoutes(routes, resolve) {
       routes.splice(0)
