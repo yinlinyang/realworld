@@ -83,6 +83,7 @@
 import { getArticle, getComments, addComment, deleteComment } from '@/api/article'
 import ArticleMeta from './components/ArticleMeta'
 import { mapState } from 'vuex'
+import MarkdownIt from 'markdown-it'
 
 export default {
   name: 'ArticleIndex',
@@ -104,6 +105,9 @@ export default {
         getArticle(slug),
         getComments(slug)
       ])
+      const article = articleRes.data.article
+      const md = new MarkdownIt()
+      article.body = md.render(article.body)
       return {
         article: articleRes.data.article,
         comments: commentsRes.data.comments
