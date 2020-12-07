@@ -1,5 +1,9 @@
 module.exports = {
   plugins: ['~/plugins/request.js', '~/plugins/dayjs.js'],
+  server: {
+    port: 3001, // default: 3000
+    host: '0.0.0.0' // default: localhost
+  },
   router: {
     extendRoutes(routes, resolve) {
       routes.splice(0)
