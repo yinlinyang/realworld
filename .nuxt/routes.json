@@ -6,46 +6,38 @@
       {
         "path": "",
         "name": "home",
-        "component": "/Users/yinqin/Documents/learn/fed-e-task-03-03/pages/home",
-        "_name": "_4e00394b"
+        "component": "/Users/yinqin/Documents/learn/fed-e-task-03-03/pages/home"
       },
       {
         "path": "/login",
         "name": "login",
-        "component": "/Users/yinqin/Documents/learn/fed-e-task-03-03/pages/login",
-        "_name": "_723f387d"
+        "component": "/Users/yinqin/Documents/learn/fed-e-task-03-03/pages/login"
       },
       {
         "path": "/register",
         "name": "register",
-        "component": "/Users/yinqin/Documents/learn/fed-e-task-03-03/pages/login",
-        "_name": "_723f387d"
+        "component": "/Users/yinqin/Documents/learn/fed-e-task-03-03/pages/login"
       },
       {
         "path": "/profile/:username/:articleType?",
         "name": "profile",
-        "component": "/Users/yinqin/Documents/learn/fed-e-task-03-03/pages/profile",
-        "_name": "_8f0c4486"
+        "component": "/Users/yinqin/Documents/learn/fed-e-task-03-03/pages/profile"
       },
       {
         "path": "/settings",
         "name": "settings",
-        "component": "/Users/yinqin/Documents/learn/fed-e-task-03-03/pages/settings",
-        "_name": "_2ffc2ae2"
+        "component": "/Users/yinqin/Documents/learn/fed-e-task-03-03/pages/settings"
       },
       {
         "path": "/editor/:slug?",
         "name": "editor",
-        "component": "/Users/yinqin/Documents/learn/fed-e-task-03-03/pages/editor",
-        "_name": "_6dc80a4e"
+        "component": "/Users/yinqin/Documents/learn/fed-e-task-03-03/pages/editor"
       },
       {
         "path": "/article/:slug",
         "name": "article",
-        "component": "/Users/yinqin/Documents/learn/fed-e-task-03-03/pages/article",
-        "_name": "_c177bdec"
+        "component": "/Users/yinqin/Documents/learn/fed-e-task-03-03/pages/article"
       }
-    ],
-    "_name": "_562a56d4"
+    ]
   }
 ]
