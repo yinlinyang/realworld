@@ -326,7 +326,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "827fa52e"
+  "4086c77f"
   
 )
 
@@ -540,7 +540,7 @@ var article_component = Object(componentNormalizer["a" /* default */])(
   false,
   article_injectStyles,
   null,
-  "05f4158a"
+  "2c585465"
   
 )
 
