@@ -63,7 +63,7 @@ export default {
       user: {
         username: 'ccc.yyy@gmail.com',
         email: 'ccc.yyy@gmail.com',
-        password: '12345678',
+        password: '',
       },
       errors: []
     }
